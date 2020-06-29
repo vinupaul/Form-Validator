@@ -68,25 +68,6 @@ function getFieldName(input){
     return input.id.charAt(0).toUpperCase() +input.id.slice(1);
 }
 
-
-function isPhoneNumberValid(phone){
-    var phoneno = /^\d{10}$/;
-    // return phoneno.test(String(phone));
-    if(phone.value == ""){
-        showError(input,"Enter number");
-    }
-    else if(phoneno.test(String(phone))){
-        showSucess(input);
-        // showError(input,"Invalid Number");
-    }else{
-        // showSucess(input);
-        showError(input,"Invalid Number");
-    }
-  }
-
-
-
-
 //Event listener
 form.addEventListener("submit",(e) =>{
     e.preventDefault();
